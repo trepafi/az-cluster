@@ -8,15 +8,15 @@ variable "client_secret" {
 
 variable "region" {
   description = "Azure Region"
-  default = "westeurope"
+  default     = "westeurope"
 }
 
 variable "environment" {
   description = "Working enviroment"
-  default = "dev"
+  default     = "dev"
 }
 
 variable "node_size" {
   description = "Size for Azure instances to be used as K8s nodes"
-  default = "Standard_D2_v2"
+  default     = "Standard_D2_v2"
 }
