@@ -75,5 +75,6 @@ jobs:
       run: terraform apply -auto-approve -input=false tf.plan
     
     - name: Terraform Output
-      k8_cluster_name=$(terraform output kubernetes_cluster_name)
-      echo $k8_cluster_name 
+      run: |
+        k8_cluster_name=$(terraform output kubernetes_cluster_name)
+        echo $k8_cluster_name 
