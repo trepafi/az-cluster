@@ -18,8 +18,8 @@ jobs:
       ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID}}
       ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID}}
 
-      AZ_ACCOUNT_NAME: account
-      AZ_RESOURCE_GROUP: rg
+      AZ_STORAGE_ACCOUNT_NAME: azk8sstorage
+      AZ_RESOURCE_GROUP: az-k8s-resource-group
       TF_STATE_FILENAME: tfstate
     
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
@@ -44,7 +44,7 @@ jobs:
       with:
         azcliversion: 2.20.0
         inlineScript: |
-          az storage container create --name ${{ env.TF_STATE_FILENAME }} --account-name ${{ env.AZ_ACCOUNT_NAME }} --resource-group ${{ env.AZ_RESOURCE_GROUP }}
+          az storage container create --name ${{ env.TF_STATE_FILENAME }} --account-name ${{ env.AZ_STORAGE_ACCOUNT_NAME }} --resource-group ${{ env.AZ_RESOURCE_GROUP }}
     
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token 
     - name: Setup Terraform
