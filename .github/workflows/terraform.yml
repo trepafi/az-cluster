@@ -80,7 +80,7 @@ jobs:
         k8_cluster_name=$(terraform output kubernetes_cluster_name)
         echo $k8_cluster_name 
   
-  terraform_destroy:
-    name: 'Terraform destroy'
-    runs-on: ubuntu-latest
+  # terraform_destroy:
+  #   name: 'Terraform destroy'
+  #   runs-on: ubuntu-latest
   
