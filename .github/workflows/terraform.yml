@@ -58,7 +58,7 @@ jobs:
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
-      run: terraform init -input=false --backend-file=${{ env.TF_BACKEND_VARS }}
+      run: terraform init -input=false --backend-config=${{ env.TF_BACKEND_VARS }}
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
