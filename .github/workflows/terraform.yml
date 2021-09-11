@@ -22,6 +22,7 @@ jobs:
       AZ_RESOURCE_GROUP: az-k8s-resource-group
       
       TF_STATE_FILENAME: tfstate
+      TF_BACKEND_VARS: /github/workspace/backend.dev.tfvars
       TF_VAR_client_id: ${{ secrets.ARM_CLIENT_ID}}
       TF_VAR_client_secret: ${{ secrets.ARM_CLIENT_SECRET}}
     
@@ -57,11 +58,11 @@ jobs:
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
-      run: terraform init -input=false
+      run: terraform init -input=false --backend-file=${{ env.TF_BACKEND_VARS }}
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
-      run: terraform fmt -check
+      run: terraform fmt -check 
 
     # Generates an execution plan for Terraform
     - id: terraform_plan

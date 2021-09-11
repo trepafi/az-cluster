@@ -26,17 +26,17 @@ variable "k8s_base_name" {
   default     = "relaxing-parrot"
 }
 
-variable "storage_account_name" {
-  description = "Azure Storage Account name"
-  default = "azk8sstorage"
-}
+# variable "storage_account_name" {
+#   description = "Azure Storage Account name"
+#   default = "azk8sstorage"
+# }
 
-variable resource_group_name {
-  description = "Azure Resource Group name"
-  default = "az-k8s-resource-group"
-}
+# variable resource_group_name {
+#   description = "Azure Resource Group name"
+#   default = "az-k8s-resource-group"
+# }
 
-variable "tfstate_filename" {
-  description = "Terraform state filename"
-  default = "tfstate"
-}
+# variable "tfstate_filename" {
+#   description = "Terraform state filename"
+#   default = "tfstate"
+# }
