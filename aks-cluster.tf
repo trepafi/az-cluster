@@ -15,7 +15,7 @@ resource "azurerm_resource_group" "default" {
 }
 
 resource "azurerm_kubernetes_cluster" "default" {
-  name                = "${var.k8s_base_name}-aks"
+  name = "${var.k8s_base_name}-aks"
   # name                = "${random_pet.prefix.id}-aks"
   location            = azurerm_resource_group.default.location
   resource_group_name = azurerm_resource_group.default.name
