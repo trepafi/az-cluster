@@ -10,8 +10,8 @@ resource "azurerm_resource_group" "default" {
 module "aks-cluster" {
   source = "./aks-cluster"
 
-  rg_name  = azurerm_resource_group.default.name
-  location = azurerm_resource_group.default.location
+  resource_group_name     = azurerm_resource_group.default.name
+  resource_group_location = azurerm_resource_group.default.location
 
   client_id     = var.client_id
   client_secret = var.client_secret
