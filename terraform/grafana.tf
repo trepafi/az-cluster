@@ -1,5 +1,6 @@
 resource "helm_release" "grafana" {
-  chart  = "stable/grafana"
-  name   = "grafana"
-  values = [file("./grafana/config.yml")]
+  repository = "https://grafana.github.io/helm-charts"
+  chart      = "stable/grafana"
+  name       = "grafana"
+  values     = [file("./grafana/config.yml")]
 }
