@@ -22,7 +22,7 @@ jobs:
       AZ_RESOURCE_GROUP: az-k8s-resource-group
       
       TF_STATE_FILENAME: tfstate
-      TF_BACKEND_VARS: /github/workspace/backend.dev.tfvars
+      TF_BACKEND_VARS: ./backend.dev.tfvars
       TF_VAR_client_id: ${{ secrets.ARM_CLIENT_ID}}
       TF_VAR_client_secret: ${{ secrets.ARM_CLIENT_SECRET}}
     
