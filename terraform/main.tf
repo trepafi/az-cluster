@@ -8,8 +8,8 @@ resource "azurerm_resource_group" "default" {
 }
 
 module "aks-cluster" {
-  source   = "./aks-cluster"
-  
+  source = "./aks-cluster"
+
   rg_name  = azurerm_resource_group.default.name
   location = azurerm_resource_group.default.location
 
