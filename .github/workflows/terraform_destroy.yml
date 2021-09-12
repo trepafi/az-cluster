@@ -1,4 +1,4 @@
-name: Manually destroy cluster
+name: Terraform destroy
 
 on: 
   workflow_dispatch:
