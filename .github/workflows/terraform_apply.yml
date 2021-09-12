@@ -34,7 +34,7 @@ jobs:
     # Checkout the repository to the GitHub Actions runner
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@master
 
     # Azure CLI Login
     - name: Azure Login
