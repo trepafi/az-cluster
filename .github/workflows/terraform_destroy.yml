@@ -1,5 +1,12 @@
 name: Manually destroy cluster
-on: workflow_dispatch
+
+on: 
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        default: 'warning'
+
 jobs:
   terraform_destroy:
     name: 'Terraform destroy'
