@@ -57,7 +57,7 @@ jobs:
         terraform_wrapper: false
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
-    - name: Terraform Init
+    - name: Terraform init
       run: terraform init -input=false --backend-config=${{ env.TF_BACKEND_VARS }}
 
     # Checks that all Terraform configuration files adhere to a canonical format
@@ -66,21 +66,24 @@ jobs:
 
     # Generates an execution plan for Terraform
     - id: terraform_plan
-      name: Terraform Plan
+      name: Terraform plan
       run: terraform plan -input=false -no-color -out tf.plan
     
       # On push to master, build or change infrastructure according to Terraform configuration files
       # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
-    - name: Terraform Apply
+    - name: Terraform apply
       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
       run: terraform apply -auto-approve -input=false tf.plan
     
-    - name: Terraform Output
+    - name: Terraform output
       run: |
         k8_cluster_name=$(terraform output kubernetes_cluster_name)
-        echo $k8_cluster_name 
-  
-  # terraform_destroy:
-  #   name: 'Terraform destroy'
-  #   runs-on: ubuntu-latest
-  
+        echo $k8_cluster_name
+    
+    # Uploading tf.plan
+    - name: Upload tf.plan
+        uses: actions/upload-artifact@v2
+        with:
+          name: terraform-plan
+          path: tf.plan
+
