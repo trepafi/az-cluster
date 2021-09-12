@@ -1,0 +1,5 @@
+grafana.ini:
+  default:
+    instance_name: grafana-instance
+  auth.basic:
+    enabled: true
