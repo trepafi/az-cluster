@@ -82,8 +82,8 @@ jobs:
     
     # Uploading tf.plan
     - name: Upload tf.plan
-        uses: actions/upload-artifact@v2
-        with:
-          name: terraform-plan
-          path: tf.plan
+      uses: actions/upload-artifact@v2
+      with:
+        name: terraform-plan
+        path: tf.plan
 
