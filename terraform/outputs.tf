@@ -3,7 +3,7 @@ output "resource_group_name" {
 }
 
 output "kubernetes_cluster" {
-  value = module.kubernetes_cluster.name
+  value = module.aks_cluster.kubernetes_cluster
 }
 
 # output "host" {
