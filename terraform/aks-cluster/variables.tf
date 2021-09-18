@@ -3,19 +3,11 @@ variable "node_size" {
   default     = "Standard_D2_v2"
 }
 
-variable "k8s_base_name" {
-  description = "Name for K8s cluster and resources"
-  default     = "relaxing-parrot"
-}
 
 # Inherited vars
+variable "k8s_base_name" {}
 variable "environment" {}
-
 variable "client_id" {}
-
 variable "client_secret" {}
-
-
 variable "resource_group_name" {}
-
 variable "resource_group_location" {}

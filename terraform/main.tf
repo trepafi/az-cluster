@@ -17,4 +17,6 @@ module "aks-cluster" {
   client_secret = var.client_secret
 
   environment = var.environment
+
+  k8s_base_name = var.k8s_base_name
 }

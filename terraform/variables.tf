@@ -15,3 +15,8 @@ variable "environment" {
   description = "Working enviroment"
   default     = "dev"
 }
+
+variable "k8s_base_name" {
+  description = "Name for K8s cluster and resources"
+  default     = "relaxing-parrot"
+}
