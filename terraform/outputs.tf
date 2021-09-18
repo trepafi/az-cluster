@@ -3,7 +3,7 @@ output "resource_group_name" {
 }
 
 output "kubernetes_cluster_name" {
-  value = azurerm_kubernetes_cluster.default.name
+  value = module.aks_cluster.azurerm_kubernetes_cluster.default.name
 }
 
 # output "host" {
