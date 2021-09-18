@@ -1,3 +1,3 @@
-output "kubernetes_cluster_name" {
-  value = azurerm_kubernetes_cluster.default.name
+output "kubernetes_cluster" {
+  value = azurerm_kubernetes_cluster.default
 }
