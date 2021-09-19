@@ -33,7 +33,7 @@ $ az ad sp create-for-rbac --name "github" --role contributor --scopes /subscrip
 + Create a resource group ad a storage for Terraform state
 ```bash
 $ export storage_account_name="azk8sstorage"
-$ export resource_group_name="az-k8s-resource-group"
+$ export resource_group_name="az-k8s-rg"
 $ export tfstate_filename="tfstate"
 $ export region="westeurope"
 $ az group create --location ${region} --resource-group ${resource_group_name} 
