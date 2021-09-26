@@ -22,6 +22,6 @@ module "aks_cluster" {
 
 module "kubernetes" {
   source = "./kubernetes"
-  
+
   kubernetes_cluster = module.aks_cluster.kubernetes_cluster
 }
