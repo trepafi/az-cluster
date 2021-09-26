@@ -23,5 +23,6 @@ module "aks_cluster" {
 module "kubernetes" {
   source = "./kubernetes"
 
+  depends_on         = [module.aks_cluster]
   kubernetes_cluster = module.aks_cluster.kubernetes_cluster
 }
