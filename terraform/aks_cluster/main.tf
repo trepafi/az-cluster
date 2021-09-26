@@ -1,4 +1,4 @@
-resource "azurerm_kubernetes_cluster" "default" {
+resource "azurerm_kubernetes_cluster" "kubernetes_cluster" {
   name                = "${var.k8s_base_name}-aks"
   location            = var.resource_group_location
   resource_group_name = var.resource_group_name

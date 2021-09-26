@@ -19,3 +19,9 @@ module "aks_cluster" {
   environment   = var.environment
   k8s_base_name = var.k8s_base_name
 }
+
+module "kubernetes" {
+  source = "./kubernetes"
+  
+  kubernetes_cluster = module.aks_cluster.kubernetes_cluster
+}
