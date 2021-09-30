@@ -5,9 +5,9 @@ provider "helm" {
 }
 
 provider "kubernetes" {
-  host = var.kubernetes_cluster.host
+  # host = var.kubernetes_cluster.host
 
-  client_certificate     = base64decode(var.kubernetes_cluster.client_certificate)
-  client_key             = base64decode(var.kubernetes_cluster.client_key)
-  cluster_ca_certificate = base64decode(var.kubernetes_cluster.cluster_ca_certificate)
+  # client_certificate     = base64decode(var.kubernetes_cluster.client_certificate)
+  # client_key             = base64decode(var.kubernetes_cluster.client_key)
+  # cluster_ca_certificate = base64decode(var.kubernetes_cluster.cluster_ca_certificate)
 }

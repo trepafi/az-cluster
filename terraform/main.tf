@@ -20,9 +20,9 @@ module "aks_cluster" {
   k8s_base_name = var.k8s_base_name
 }
 
-module "kubernetes" {
-  source = "./kubernetes"
+# module "kubernetes" {
+#   source = "./kubernetes"
 
-  depends_on         = [module.aks_cluster]
-  kubernetes_cluster = module.aks_cluster.kubernetes_cluster
-}
+#   depends_on         = [module.aks_cluster]
+#   kubernetes_cluster = module.aks_cluster.kubernetes_cluster
+# }
