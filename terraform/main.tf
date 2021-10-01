@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "default" {
   }
 }
 
-module "aks_cluster" {s
+module "aks_cluster" {
   source = "./aks_cluster"
 
   resource_group_name     = azurerm_resource_group.default.name
