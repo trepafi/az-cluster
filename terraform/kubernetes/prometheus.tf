@@ -1,7 +1,7 @@
 resource "helm_release" "prometheus" {
   chart      = "prometheus"
   name       = "prometheus"
-  namespace  = var.namespace
+  namespace  = var.metrics_ns
   repository = "https://prometheus-community.github.io/helm-charts"
 
   # When you want to directly specify the value of an element in a map you need \\ to escape the point.
