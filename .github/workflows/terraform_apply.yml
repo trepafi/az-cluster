@@ -83,7 +83,7 @@ jobs:
     
     - name: Terraform output
       run: |
-        k8_cluster_name=$(terraform output kubernetes_cluster_name)
+        k8_cluster_name=$(terraform output k8s_cluster_name)
         echo $k8_cluster_name
       working-directory: ${{ env.WORKING_DIRECTORY }}
     
