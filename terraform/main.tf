@@ -32,6 +32,6 @@ resource "local_file" "kubeconfig" {
 module "kubernetes" {
   source = "./kubernetes"
 
-  depends_on  = [module.aks_cluster]
-  k8s_cluster = module.aks_cluster.k8s_cluster
+  # depends_on  = [module.aks_cluster]
+  # k8s_cluster = module.aks_cluster.k8s_cluster
 }
