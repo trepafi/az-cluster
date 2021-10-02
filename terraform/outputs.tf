@@ -6,6 +6,10 @@ output "k8s_cluster_name" {
   value = module.aks_cluster.k8s_cluster.name
 }
 
+output "k8s_cluster_name" {
+  value = module.aks_cluster.k8s_cluster.kube_config.0.host
+}
+
 # output "host" {
 #   value = a8s_cluster.default.kube_config.0.host
 # }
