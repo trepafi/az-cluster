@@ -10,9 +10,9 @@ output "k8s_cluster_host" {
   value = module.aks_cluster.k8s_cluster.kube_config.0.host
 }
 
-output "k8s_kubeconfig" {
-  value = local_file.kubeconfig.content
-}
+# output "k8s_kubeconfig" {
+#   value = local_file.kubeconfig.content
+# }
 
 # output "host" {
 #   value = a8s_cluster.default.kube_config.0.host
