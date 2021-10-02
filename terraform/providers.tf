@@ -5,7 +5,7 @@ provider "azurerm" {
 provider "local" {}
 
 provider "kubernetes" {
-  alias            = "akz"
+  alias            = "aks"
   load_config_file = "true"
   config_path      = ".tfkubeconfig"
 }
