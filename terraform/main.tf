@@ -1,3 +1,4 @@
+# Creating Azure resource group
 resource "azurerm_resource_group" "default" {
   name     = "${var.k8s_base_name}-rg"
   location = var.region
@@ -7,6 +8,7 @@ resource "azurerm_resource_group" "default" {
   }
 }
 
+# Deploying AKS cluster
 module "aks_cluster" {
   source = "./aks_cluster"
 
@@ -20,9 +22,16 @@ module "aks_cluster" {
   k8s_base_name = var.k8s_base_name
 }
 
+# Creatin Kubectl file
+resource "local_file" "kubeconfig" {
+  content  = base64decode(module.aks_cluster.k8s_cluster.kubeconfig)
+  filename = ".tfkubeconfig"
+}
+
+# Deploying on K8s cluster
 module "kubernetes" {
   source = "./kubernetes"
 
-  depends_on         = [module.aks_cluster]
+  depends_on  = [module.aks_cluster]
   k8s_cluster = module.aks_cluster.k8s_cluster
 }
