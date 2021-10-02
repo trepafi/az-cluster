@@ -23,10 +23,10 @@ module "aks_cluster" {
 }
 
 # Creating Kubectl file
-resource "local_file" "kubeconfig" {
-  sensitive_content = module.aks_cluster.k8s_cluster.kube_config_raw
-  filename          = ".tfkubeconfig"
-}
+# resource "local_file" "kubeconfig" {
+#   sensitive_content = module.aks_cluster.k8s_cluster.kube_config_raw
+#   filename          = ".tfkubeconfig"
+# }
 
 # Deploying on K8s cluster
 module "kubernetes" {
