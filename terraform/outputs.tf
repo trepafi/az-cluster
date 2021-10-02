@@ -11,7 +11,7 @@ output "k8s_cluster_host" {
 }
 
 output "k8s_kubeconfig" {
-  value = local.kubeconfig.content
+  value = local_file.kubeconfig.content
 }
 
 # output "host" {
