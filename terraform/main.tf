@@ -24,7 +24,7 @@ module "aks_cluster" {
 
 # Creatin Kubectl file
 resource "local_file" "kubeconfig" {
-  content  = base64decode(module.aks_cluster.k8s_cluster.kubeconfig)
+  content  = base64decode(module.aks_cluster.k8s_cluster.kube_config_raw)
   filename = ".tfkubeconfig"
 }
 
