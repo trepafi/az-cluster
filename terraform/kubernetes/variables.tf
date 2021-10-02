@@ -1,6 +1,6 @@
 variable "namespace" {
-  type    = string
-  default = "dev"
+  type        = string
+  default     = "dev"
   description = "Default namespace"
 }
 
