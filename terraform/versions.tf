@@ -22,15 +22,3 @@ terraform {
   required_version = ">= 0.14"
 
 }
-
-provider "azurerm" {
-  features {}
-}
-
-provider "local" {}
-
-provider "kubernetes" {
-  alias            = "akz"
-  load_config_file = "true"
-  config_path      = ".tfkubeconfig"
-}

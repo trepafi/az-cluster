@@ -1,9 +1,3 @@
-# variable "kube_config" {
-#   type        = string
-#   description = "Kubectl config file"
-#   default     = "~/.kube/config"
-# }
-
 variable "namespace" {
   type    = string
   default = "dev"
