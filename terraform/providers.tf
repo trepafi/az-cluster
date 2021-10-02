@@ -3,7 +3,7 @@ provider "azurerm" {
 }
 
 provider "local" {
-  
+
 }
 
 provider "kubernetes" {
