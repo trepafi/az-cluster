@@ -24,8 +24,8 @@ module "aks_cluster" {
 
 # Creatin Kubectl file
 resource "local_file" "kubeconfig" {
-  sensitive_content  = base64decode(module.aks_cluster.k8s_cluster.kube_config_raw)
-  filename = ".tfkubeconfig"
+  sensitive_content = base64decode(module.aks_cluster.k8s_cluster.kube_config_raw)
+  filename          = ".tfkubeconfig"
 }
 
 # Deploying on K8s cluster
