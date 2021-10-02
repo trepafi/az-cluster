@@ -22,20 +22,7 @@ module "aks_cluster" {
   k8s_base_name = var.k8s_base_name
 }
 
-# Creating Kubectl file
-# resource "local_file" "kubeconfig" {
-#   sensitive_content = module.aks_cluster.k8s_cluster.kube_config_raw
-#   filename          = ".tfkubeconfig"
-# }
-
 # Deploying on K8s cluster
 module "kubernetes" {
   source = "./kubernetes"
-
-  # depends_on  = [module.aks_cluster, local_file.kubeconfig]
-  # k8s_cluster = module.aks_cluster.k8s_cluster
-
-  # providers = {
-  #   kubernetes = kubernetes.aks
-  # }
 }
