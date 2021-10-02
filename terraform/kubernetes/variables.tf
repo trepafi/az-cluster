@@ -4,9 +4,9 @@ variable "webapp_namespace" {
   description = "Namespase for a web application"
 }
 
-variable "k8s_cluster" {
-  description = "Kubernetes cluster configuration"
-}
+# variable "k8s_cluster" {
+#   description = "Kubernetes cluster configuration"
+# }
 
 # variable "grafana_password" {
 #   description = "Grafana password"
