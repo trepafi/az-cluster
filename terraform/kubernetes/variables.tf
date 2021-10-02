@@ -1,7 +1,7 @@
-variable "namespace" {
+variable "webapp_namespace" {
   type        = string
-  default     = "dev"
-  description = "Default namespace"
+  default     = "webapp"
+  description = "Namespase for a web application"
 }
 
 variable "k8s_cluster" {

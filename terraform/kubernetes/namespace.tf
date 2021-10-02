@@ -1,6 +1,5 @@
-# resource "kubernetes_namespace" "this" {
-#   # provider = kubernetes.akz
-#   metadata {
-#     name = var.namespace
-#   }
-# }
+resource "kubernetes_namespace" "webapp" {
+  metadata {
+    name = var.webapp_namespace
+  }
+}
