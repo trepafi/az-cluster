@@ -1,7 +1,7 @@
-variable "webapp_namespace" {
+variable "admin_ns" {
   type        = string
-  default     = "webapp"
-  description = "Namespase for a web application"
+  default     = "admin"
+  description = "Admin namespace"
 }
 
 # variable "grafana_password" {

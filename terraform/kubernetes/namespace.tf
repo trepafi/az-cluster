@@ -1,5 +1,5 @@
-resource "kubernetes_namespace" "webapp" {
+resource "kubernetes_namespace" "admin_ns" {
   metadata {
-    name = var.webapp_namespace
+    name = var.admin_ns
   }
 }
