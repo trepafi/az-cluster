@@ -3,7 +3,7 @@ resource "helm_release" "prometheus" {
   name       = "my-prometheus"
   namespace  = var.metrics_ns
   repository = "https://charts.bitnami.com/bitnami"
-  
+
   # chart      = "prometheus"
   # name       = "prometheus"
   # namespace  = var.metrics_ns
