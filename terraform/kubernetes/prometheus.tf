@@ -1,10 +1,10 @@
 resource "helm_release" "prometheus" {
   chart      = "prometheus-community/kube-prometheus-stack"
-  version    = "18.1.1"
   name       = "my-prometheus"
   namespace  = var.metrics_ns
   repository = "https://prometheus-community.github.io/helm-charts/"
 
+  # version    = "18.1.1"
   # chart      = "kube-prometheus"
   # name       = "my-prometheus"
   # namespace  = var.metrics_ns
