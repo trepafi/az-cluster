@@ -1,5 +1,6 @@
 resource "helm_release" "prometheus" {
-  chart      = "prometheus-community/kube-prometheus-stack:19.0.1"
+  chart      = "prometheus-community/kube-prometheus-stack"
+  version    = "19.0.1"
   name       = "my-prometheus"
   namespace  = var.metrics_ns
   repository = "https://prometheus-community.github.io/helm-charts"
