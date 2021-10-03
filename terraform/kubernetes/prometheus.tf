@@ -1,5 +1,5 @@
 resource "helm_release" "prometheus" {
-  chart      = "bitnami/kube-prometheus"
+  chart      = "kube-prometheus"
   name       = "my-prometheus"
   namespace  = var.metrics_ns
   repository = "https://charts.bitnami.com/bitnami"
