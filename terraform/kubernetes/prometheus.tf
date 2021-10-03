@@ -7,6 +7,6 @@ resource "helm_release" "prometheus" {
 
   ## Overriding values
   values = [
-    file("kube-prometheus-stack.yml")
+    file("./kube-prometheus-stack.yml")
   ]
 }
